@@ -6,7 +6,8 @@ import java.util.Stack;
 
 public class ValidParenthesis {
     public static void main(String[] args) {
-        System.out.println(isValid("[]()(){}"));
+        System.out.println(minAddToValid("((()(("));
+
     }
     public static  boolean isValid(String s ){
         Stack<Character> st = new Stack<>();
@@ -28,5 +29,28 @@ public class ValidParenthesis {
       return  st.isEmpty();
 
 
+    }
+
+    public static int minAddToValid(String s){
+        int ans = 0;
+       int open = 0;
+
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if(ch=='('){
+                ans++;
+
+            }else if(ch==')'){
+                if(ans==0){
+                   open++;
+                }else{
+                    ans--;
+                }
+
+            }
+        }
+        return ans+open;
     }
 }

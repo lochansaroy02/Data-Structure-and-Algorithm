@@ -35,7 +35,7 @@ public class SlidingWindowFixed {
     }
 
 
-    // max sum in all subarray of size k
+    // max sum in all sub array of size k
 
     public static ArrayList<Integer> negativeNumber(int [] arr, int n , int k){
 

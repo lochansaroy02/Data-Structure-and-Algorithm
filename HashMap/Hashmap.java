@@ -5,20 +5,17 @@ import java.util.HashSet;
 
 public class Hashmap {
     public static void main(String[] args) {
-       int [] arr = {1,2,3,4,1,2};
+            HashMap<String, Integer> mp = new HashMap<>();
+            mp.put("lochan",22);
+            mp.put("rajan",22);
+              for (String student : mp.keySet()) {
+               System.out.println(student);
+            }
+
+
     }
 
 
-        public boolean containsDuplicate(int[] nums) {
-            HashSet<Integer>  set = new HashSet<>();
-            for (int num : nums) {
-                if (set.contains(num)) {
-                    return true;
-                }
-                set.add(num);
-            }
-            return false;
-        }
 
 
 
