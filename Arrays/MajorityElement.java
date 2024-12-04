@@ -1,7 +1,11 @@
 package Arrays;
 
+import java.util.Arrays;
+
 public class MajorityElement {
     public static void main(String[] args) {
+        int [] arr = {2,2,1,1,1,2,2};
+        System.out.println(majorityElement2(arr));
 
     }
 
@@ -23,5 +27,9 @@ public class MajorityElement {
         return candidate;
 
 
+    }
+    public static  int majorityElement2(int [] arr){
+        Arrays.sort(arr);
+        return arr[arr.length/2];
     }
 }

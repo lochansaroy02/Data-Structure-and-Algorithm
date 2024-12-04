@@ -2,22 +2,24 @@ package HashMap;
 
 import java.util.HashMap;
 
-public class UniqueNumber {
+public class MakeArrayUnique {
+
     public static void main(String[] args) {
-            int [] arr = {2, 3, 1, 6, 3, 6, 2};
-            uniqueNumber( arr);
+        int [] arr = {1,2,3,1,2,3};
+        makeArrayUnique(arr);
     }
-    public  static  void uniqueNumber( int [] arr){
+    public  static  void makeArrayUnique(int [] arr){
         HashMap<Integer, Integer> mp = new HashMap<>();
         for (int j : arr) {
             if (mp.containsKey(j)) {
-                mp.put(j, mp.get(j) + 1);
+                mp.put(j, mp.get(j)+1);
+
             } else {
                 mp.put(j, 1);
             }
         }
-        System.out.println(mp.get(2));
-        System.out.println(mp.values());
+        System.out.println(mp.keySet());
+        System.out.println(mp.entrySet());
 
     }
 }

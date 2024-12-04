@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class RotateTheArray {
     public static void main(String[] args) {
-        int [] arr = {-1,-100,3,99}; //Output: [3,99,-1,-100]
-        rotate(arr,2);
+        int [] arr = {7, 3, 9, 1}; //Output: [3,99,-1,-100]
+        rotate(arr,9);
     }
     public  static  void rotateFunction(int [] arr){
         int temp = arr[0];
@@ -23,7 +23,7 @@ public class RotateTheArray {
     }
 
     public static  void rotate(int []arr,int k){
-        int i = 0;
+        int i = 1;
         while(i<=k){
             rotateFunction(arr);
             i++;
