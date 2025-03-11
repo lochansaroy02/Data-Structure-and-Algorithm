@@ -2,7 +2,8 @@ package Arrays.Matrix;
 
 public class RotateTheBox {
     public static void main(String[] args) {
-
+        int [][] arr = {{3, 6, 9},{2, 5, 8}, {1, 4, 7}};
+        transpose(arr);
     }
     public static   void transpose ( int [][] arr){
         int m = arr.length;
@@ -15,9 +16,7 @@ public class RotateTheBox {
             }
         }
 
-        for( int [] row: arr){
-            reverse(row);
-        }
+
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {

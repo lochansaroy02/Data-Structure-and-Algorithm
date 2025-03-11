@@ -53,4 +53,8 @@ public class ValidParenthesis {
         }
         return ans+open;
     }
+
+    public static int  LongestValidParentheses(String s ){
+          return 1;
+    }
 }
