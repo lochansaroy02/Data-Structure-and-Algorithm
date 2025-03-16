@@ -1,6 +1,7 @@
 package Arrays.Basic;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Rotate {
     public static void main(String[] args) {
@@ -20,9 +21,7 @@ public class Rotate {
     public static void rightRotate(int [] arr){
         int temp  = arr[arr.length-1];
         //shift direction will right to left
-        for(int i = arr.length-2; i>=0; i--){
-            arr[i+1] = arr[i];
-        }
+        IntStream.iterate(arr.length - 2, i -> i >= 0, i -> i - 1).forEach(i -> arr[i + 1] = arr[i]);
         arr[0] = temp;
 
         System.out.println(Arrays.toString(arr));
